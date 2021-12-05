@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blood_Pressure_Tracker Project", "Blood_Pressure_Tracker Project\Blood_Pressure_Tracker Project.csproj", "{D7AEC654-3A4D-4C81-8F8F-7D55D8ABA1D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{7C795440-51A0-4B12-A773-57BF9ADE8DD5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D7AEC654-3A4D-4C81-8F8F-7D55D8ABA1D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7AEC654-3A4D-4C81-8F8F-7D55D8ABA1D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7AEC654-3A4D-4C81-8F8F-7D55D8ABA1D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7AEC654-3A4D-4C81-8F8F-7D55D8ABA1D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C795440-51A0-4B12-A773-57BF9ADE8DD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C795440-51A0-4B12-A773-57BF9ADE8DD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C795440-51A0-4B12-A773-57BF9ADE8DD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C795440-51A0-4B12-A773-57BF9ADE8DD5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5E0DAA17-8018-4359-A2C5-57828631E3FA}
+	EndGlobalSection
+EndGlobal
