@@ -29,9 +29,36 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Form frm = new Form2();
-            frm.Show();
+            if (textBox1.Text != "" && textBox2.Text != "")
+            {
+                if (textBox2.Text.Length > 6)
+                {
+                    // bashof el user name dah mawgod w dah el password bta3u wlaa laa , aw bakhod data wana at3aml
+                    if (true)
+                    {
+                        ///Form1.SetValueForText1 = "1";
+                        this.Hide();
+                        Form frm = new Form2();
+                        frm.Show();
+                    }
+                    // feh haga 3'lt
+                    else
+                    {
+                        label4.Visible = true;
+                        label4.Text = "Invalid Username or Password";
+                    }
+                }
+                else
+                {
+                    label4.Visible = true;
+                    label4.Text = "Password is too small";
+                }
+            }
+            else
+            {
+                label4.Visible = true;
+                label4.Text = "Please fill all spaces";
+            }
         }
     }
 }

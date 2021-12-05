@@ -30,12 +30,28 @@ namespace WindowsFormsApp1
             else if (button2.Text == "Save")
             {
 
-                button2.Text = "Update";
-                textBox1.Enabled = false;
-                textBox2.Enabled = false;
-                textBox3.Enabled = false;
-                comboBox1.Enabled = false;
-                //ya5od el data w yb3tha le function el database
+                    button2.Text = "Update";
+                    textBox1.Enabled = false;
+                    textBox2.Enabled = false;
+                    textBox3.Enabled = false;
+                    comboBox1.Enabled = false;
+
+                  if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && comboBox1.Text != "")
+                  {
+                        //msh mawgod abl keda
+                        if (textBox1.Text == "")
+                        {
+                            //ya5od el data w yb3tha le function el database
+                        }
+                        else {
+                            label5.Visible = true;
+                            label5.Text = "This Username is used before";
+                        }
+                 }
+                else {
+                        label5.Visible = true;
+                        label5.Text = "Please fill all spaces";
+                }
             }
         }
 
