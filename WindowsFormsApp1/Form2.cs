@@ -19,9 +19,11 @@ namespace WindowsFormsApp1
 
         private void button4_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             Form frm = new Form1();
-            frm.Show();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,9 +38,16 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             Form frm = new Form4();
-            frm.Show();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

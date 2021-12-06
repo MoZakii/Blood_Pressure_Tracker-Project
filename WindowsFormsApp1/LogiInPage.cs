@@ -21,10 +21,11 @@ namespace WindowsFormsApp1
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
 
-            this.Hide();
+            
             Form frm = new Form1();
-            frm.Show();
-           
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -37,9 +38,11 @@ namespace WindowsFormsApp1
                     if (true)
                     {
                         ///Form1.SetValueForText1 = "1";
-                        this.Hide();
+                        
                         Form frm = new Form2();
-                        frm.Show();
+                        this.Hide();
+                        frm.ShowDialog();
+                        this.Close();
                     }
                     // feh haga 3'lt
                     else

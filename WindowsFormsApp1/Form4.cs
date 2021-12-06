@@ -69,9 +69,11 @@ namespace WindowsFormsApp1
 
                 }
             }
-            this.Hide();
+            
             Form frm = new Form2();
-            frm.Show();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
         }
     }
 }

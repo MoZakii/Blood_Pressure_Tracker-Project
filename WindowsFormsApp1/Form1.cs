@@ -29,9 +29,11 @@ namespace WindowsFormsApp1
                     {
                         //set el id el gded
                         SetValueForText1 = "1";
-                        this.Hide();
                         Form frm = new Form2();
-                        frm.Show();
+                        this.Hide();
+                        frm.ShowDialog();
+                        this.Close();
+
                     }
                     else
                     {
@@ -42,7 +44,7 @@ namespace WindowsFormsApp1
                 else
                 {
                     label7.Visible = true;
-                    label7.Text = "Password is too small";  
+                    label7.Text = "Password is too small"; 
                 }
             }
             else
@@ -54,10 +56,11 @@ namespace WindowsFormsApp1
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
-            this.Hide();
             Form frm = new Form3();
-            frm.Show();
+            this.Hide();
+            frm.ShowDialog();          
+            this.Close();
+            
         }
 
         private void name_box_TextChanged(object sender, EventArgs e)
