@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
         public Form2()
         {
             InitializeComponent();
+            ServiceReference1.WebService1SoapClient sc = new ServiceReference1.WebService1SoapClient();
+            Form1.User_ID = sc.getID("lol");
         }
 
         private void button4_Click(object sender, EventArgs e)
