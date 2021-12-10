@@ -72,25 +72,25 @@ namespace Blood_Pressure_Tracker_Project
         [WebMethod]
         public int getID(string username)
         {
-            return 6;
-            //SqlConnection conn = new SqlConnection(connectionString);
-            //conn.Open();
-            //SqlCommand comm = new SqlCommand("select ID from Users where Username = @x ", conn);
-            //comm.Parameters.Add(new SqlParameter("@x", username));
-            ////return lazem yet3mel
-            //int id = -1;
-            //SqlDataReader IDReader = comm.ExecuteReader();
-            //if (!IDReader.HasRows)
-            //    throw new Exception("User not Found");
-            //else
-            //{
-            //    IDReader.Read();
-            //    id = int.Parse(IDReader[0].ToString());
-            //}
-            //IDReader.Close();
-            //conn.Close();
+            
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+            SqlCommand comm = new SqlCommand("select ID from Users where Username = @x ", conn);
+            comm.Parameters.Add(new SqlParameter("@x", username));
+            
+            int id = -1;
+            SqlDataReader IDReader = comm.ExecuteReader();
+            if (!IDReader.HasRows)
+                throw new Exception("User not Found");
+            else
+            {
+                IDReader.Read();
+                id = int.Parse(IDReader[0].ToString());
+            }
+            IDReader.Close();
+            conn.Close();
 
-            //return id;
+            return id;
         }
         [WebMethod]
         public bool checkUsernameAvailability(string username)

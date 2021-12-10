@@ -30,32 +30,33 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ServiceReference1.WebService1SoapClient sc = new ServiceReference1.WebService1SoapClient();
             if (textBox1.Text != "" && textBox2.Text != "")
             {
-                if (textBox2.Text.Length > 6)
+                // bashof el user name dah mawgod w dah el password bta3u wlaa laa , aw bakhod data wana at3aml
+                bool isPresent = false;
+                bool passMatch = false;
+                if (sc.checkUsernameAvailability(textBox1.Text))
+                    isPresent = true;
+                if (sc.checkPassword(textBox1.Text, textBox2.Text))
+                    passMatch = true;
+
+                if (isPresent && passMatch)
                 {
-                    // bashof el user name dah mawgod w dah el password bta3u wlaa laa , aw bakhod data wana at3aml
-                    if (true)
-                    {
-                        ///Form1.SetValueForText1 = "1";
-                        
-                        Form frm = new Form2();
-                        this.Hide();
-                        frm.ShowDialog();
-                        this.Close();
-                    }
-                    // feh haga 3'lt
-                    else
-                    {
-                        label4.Visible = true;
-                        label4.Text = "Invalid Username or Password";
-                    }
+                    
+                    Form1.User_ID = sc.getID(textBox1.Text);
+                    Form frm = new Form2();
+                    this.Hide();
+                    frm.ShowDialog();
+                    this.Close();
                 }
+                
                 else
                 {
                     label4.Visible = true;
-                    label4.Text = "Password is too small";
+                    label4.Text = "Invalid Username or Password";
                 }
+
             }
             else
             {

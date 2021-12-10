@@ -20,15 +20,26 @@ namespace WindowsFormsApp1
 
         private void register_button_Click(object sender, EventArgs e)
         {
+            ServiceReference1.WebService1SoapClient sc = new ServiceReference1.WebService1SoapClient();
             if (name_box.Text != "" && age_box.Text != "" && weight_box.Text != "" && comboBox1.Text != "" && textBox1.Text != "")
             {
                 if (textBox1.Text.Length > 6)
                 {
                     // el esm uniqe
-                    if (name_box.Text != "")
+                    bool isUnique = true;
+                    if (sc.checkUsernameAvailability(name_box.Text))
+                        isUnique = false;
+
+                    if (isUnique)
                     {
                         //set el id el gded
-                        User_ID = 1;
+                        char gender;
+                        if (comboBox1.SelectedItem.ToString() == "Male")
+                            gender = 'M';
+                        else
+                            gender = 'F';
+                        sc.insertData(name_box.Text, textBox1.Text, int.Parse(age_box.Text), float.Parse(weight_box.Text),gender);
+                        User_ID = sc.getID(name_box.Text);
                         Form frm = new Form2();
                         this.Hide();
                         frm.ShowDialog();
