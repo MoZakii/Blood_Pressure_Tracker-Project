@@ -25,35 +25,37 @@ namespace WindowsFormsApp1
 
         //Labels to display the recommended Diets
 
-        String[] low_bp_diet = { "Fuck off Once", "Fuck off Twice", "Fuck off Thrice" };
-        String[] med_bp_diet = { "Fuck off Once", "Fuck off Twice", "Fuck off Thrice" };
-        String[] high_bp_diet = {"Fuck off Once", "Fuck off Twice", "Fuck off Thrice" };
+        String[] low_diet = { "Fruits and Vegetables", "Salmon", "Cucumber" };
+        String[] med_diet = { "Sandwich", "Fried Chicken", "Cereal" };
+        String[] high_diet = {"Yoghurt", "Chicken Breasts", "English Muffins" };
 
 
-        int bp = 0;
+        
         public Form5()
         {
             InitializeComponent();
 
-            //bp = 1 --> BP is low,  bp = 2 --> BP is med, bp = 3 --> is high
-
-            if (bp == 1)
+            int low = 100, high = 130;
+            //List<ServiceReference1.PressureReading> readings = new List<ServiceReference1.PressureReading>();
+            //int low = readings[readings.Count-1].Low, high = readings[readings.Count-1].High;
+            
+            if (low < 60 || high < 90)
             {
-                richTextBox1.Text = low_bp_diet[0];
-                richTextBox2.Text = low_bp_diet[1];
-                richTextBox3.Text = low_bp_diet[2];
+                richTextBox1.Text = low_diet[0];
+                richTextBox2.Text = low_diet[1];
+                richTextBox3.Text = low_diet[2];
             }
-            else if (bp == 2)
-            {
-                richTextBox1.Text = med_bp_diet[0];
-                richTextBox2.Text = med_bp_diet[1];
-                richTextBox3.Text = med_bp_diet[2];
+            else if (low > 90 || high > 120)
+            {        
+                richTextBox1.Text = high_diet[0];
+                richTextBox2.Text = high_diet[1];
+                richTextBox3.Text = high_diet[2];
             }
-            else //bp == 3
+            else 
             {
-                richTextBox1.Text = high_bp_diet[0];
-                richTextBox2.Text = high_bp_diet[1];
-                richTextBox3.Text = high_bp_diet[2];
+                richTextBox1.Text = med_diet[0];
+                richTextBox2.Text = med_diet[1];
+                richTextBox3.Text = med_diet[2];
             }
         }
     }
