@@ -12,29 +12,35 @@ namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
+        String breakfast_rec = "Fuck off Once", lunch_rec = "Fuck off Twice", dinner_rec = "Fuck off Thrice";
+
+        //Labels to display the recommended Diets
+
+        int bp = 0;
         public Form5()
         {
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
+            //bp = 1 --> BP is low,  bp = 2 --> BP is med, bp = 3 --> is high
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            if (bp == 1)
+            {
+                richTextBox1.Text = breakfast_rec;
+                richTextBox2.Text = lunch_rec;
+                richTextBox3.Text = dinner_rec;
+            }
+            else if (bp == 2)
+            {
+                richTextBox1.Text = breakfast_rec;
+                richTextBox2.Text = lunch_rec;
+                richTextBox3.Text = dinner_rec;
+            }
+            else //bp == 3
+            {
+                richTextBox1.Text = breakfast_rec;
+                richTextBox2.Text = lunch_rec;
+                richTextBox3.Text = dinner_rec;
+            }
         }
     }
 }

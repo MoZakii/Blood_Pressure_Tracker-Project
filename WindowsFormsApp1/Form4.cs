@@ -87,6 +87,6 @@ namespace WindowsFormsApp1
             this.Hide();
             frm.ShowDialog();
             this.Close();
-        }
+            }
     }
 }

@@ -73,7 +73,7 @@ namespace WindowsFormsApp1
             // 
             this.button4.Location = new System.Drawing.Point(397, 12);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(74, 24);
             this.button4.TabIndex = 6;
             this.button4.Text = "Sign out";
             this.button4.UseVisualStyleBackColor = true;
