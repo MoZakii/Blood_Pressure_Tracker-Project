@@ -12,9 +12,11 @@ namespace WindowsFormsApp1
 {
     public partial class Form5 : Form
     {
-        String breakfast_rec = "Fuck off Once", lunch_rec = "Fuck off Twice", dinner_rec = "Fuck off Thrice";
+        //Diet strings that will be displayed
 
-        //Labels to display the recommended Diets
+        String[] low_bp_diet = { "Fuck off Once", "Fuck off Twice", "Fuck off Thrice" };
+        String[] med_bp_diet = { "Fuck off Once", "Fuck off Twice", "Fuck off Thrice" };
+        String[] high_bp_diet = {"Fuck off Once", "Fuck off Twice", "Fuck off Thrice" };
 
         int bp = 0;
         public Form5()
@@ -25,21 +27,21 @@ namespace WindowsFormsApp1
 
             if (bp == 1)
             {
-                richTextBox1.Text = breakfast_rec;
-                richTextBox2.Text = lunch_rec;
-                richTextBox3.Text = dinner_rec;
+                richTextBox1.Text = low_bp_diet[0];
+                richTextBox2.Text = low_bp_diet[1];
+                richTextBox3.Text = low_bp_diet[2];
             }
             else if (bp == 2)
             {
-                richTextBox1.Text = breakfast_rec;
-                richTextBox2.Text = lunch_rec;
-                richTextBox3.Text = dinner_rec;
+                richTextBox1.Text = med_bp_diet[0];
+                richTextBox2.Text = med_bp_diet[1];
+                richTextBox3.Text = med_bp_diet[2];
             }
             else //bp == 3
             {
-                richTextBox1.Text = breakfast_rec;
-                richTextBox2.Text = lunch_rec;
-                richTextBox3.Text = dinner_rec;
+                richTextBox1.Text = high_bp_diet[0];
+                richTextBox2.Text = high_bp_diet[1];
+                richTextBox3.Text = high_bp_diet[2];
             }
         }
     }
