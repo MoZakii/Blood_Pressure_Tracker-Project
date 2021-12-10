@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
                 textBox1.Enabled = true;
                 textBox2.Enabled = true;
                 textBox3.Enabled = true;
-                comboBox1.Enabled = true;
+                
             }
             else if (button2.Text == "Save")
             {
@@ -43,7 +43,7 @@ namespace WindowsFormsApp1
                 textBox1.Enabled = false;
                 textBox2.Enabled = false;
                 textBox3.Enabled = false;
-                comboBox1.Enabled = false;
+                
 
                 if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && comboBox1.Text != "")
                 {
@@ -75,6 +75,6 @@ namespace WindowsFormsApp1
             this.Hide();
             frm.ShowDialog();
             this.Close();
-            }
+        }
     }
 }

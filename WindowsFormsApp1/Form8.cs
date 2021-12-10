@@ -17,15 +17,7 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form8_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -33,6 +25,23 @@ namespace WindowsFormsApp1
             this.Hide();
             frm.ShowDialog();
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ServiceReference1.WebService1SoapClient sc = new ServiceReference1.WebService1SoapClient();
+            List<ServiceReference1.PressureReading> readings = new List<ServiceReference1.PressureReading>();
+            readings = sc.GetUserPressureReadings(Form1.User_ID).ToList();
+            DateTime dt = DateTime.Now;
+            if (textBox1.Text == String.Empty || textBox2.Text == String.Empty)
+            {
+                label3.Visible = true;
+            }
+            else 
+            {
+                sc.insertPressureData(Form1.User_ID, readings.Count+1,int.Parse(textBox1.Text),int.Parse(textBox2.Text),dt.ToString("dd/MM/yyyy"));   
+            }
+
         }
     }
 }

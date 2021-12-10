@@ -14,6 +14,14 @@ namespace WindowsFormsApp1
     {
         String breakfast_rec = "Fuck off Once", lunch_rec = "Fuck off Twice", dinner_rec = "Fuck off Thrice";
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form frm = new Form2();
+            this.Hide();
+            frm.ShowDialog();
+            this.Close();
+        }
+
         //Labels to display the recommended Diets
 
         int bp = 0;
