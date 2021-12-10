@@ -68,21 +68,9 @@ namespace WindowsFormsApp1
             }
         }
 
-            private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (button2.Text == "Save")
-            {
-                DialogResult dialog = MessageBox.Show("Do you want to save changes ?", "Warning", MessageBoxButtons.OKCancel);
-                if (dialog == DialogResult.OK)
-                {
-                    //ya5od el data w yb3tha le function el database
-                }
-                else if (dialog == DialogResult.Cancel)
-                {
-
-                }
-            }
-            
+     
             Form frm = new Form2();
             this.Hide();
             frm.ShowDialog();
