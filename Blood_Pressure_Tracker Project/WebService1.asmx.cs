@@ -72,7 +72,7 @@ namespace Blood_Pressure_Tracker_Project
         [WebMethod]
         public int getID(string username)
         {
-            return 5;
+            return 6;
             //SqlConnection conn = new SqlConnection(connectionString);
             //conn.Open();
             //SqlCommand comm = new SqlCommand("select ID from Users where Username = @x ", conn);
