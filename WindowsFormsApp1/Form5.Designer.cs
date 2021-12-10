@@ -60,6 +60,7 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.76503F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.23497F));
@@ -77,14 +78,16 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.40476F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.59524F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 97F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(323, 270);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(327, 270);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // richTextBox3
             // 
             this.richTextBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox3.Location = new System.Drawing.Point(76, 181);
+
+            this.richTextBox3.Location = new System.Drawing.Point(78, 180);
             this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.ReadOnly = true;
             this.richTextBox3.Size = new System.Drawing.Size(238, 79);
             this.richTextBox3.TabIndex = 5;
             this.richTextBox3.Text = "";
@@ -92,8 +95,11 @@ namespace WindowsFormsApp1
             // richTextBox2
             // 
             this.richTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox2.Location = new System.Drawing.Point(77, 89);
+
+            this.richTextBox2.Location = new System.Drawing.Point(79, 88);
             this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.ReadOnly = true;
+
             this.richTextBox2.Size = new System.Drawing.Size(236, 79);
             this.richTextBox2.TabIndex = 4;
             this.richTextBox2.Text = "";
@@ -103,7 +109,9 @@ namespace WindowsFormsApp1
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 120);
+
+            this.label2.Location = new System.Drawing.Point(12, 119);
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 0;
@@ -114,7 +122,7 @@ namespace WindowsFormsApp1
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 213);
+            this.label4.Location = new System.Drawing.Point(14, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 16);
             this.label4.TabIndex = 2;
@@ -125,7 +133,7 @@ namespace WindowsFormsApp1
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 34);
+            this.label3.Location = new System.Drawing.Point(4, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
             this.label3.TabIndex = 1;
@@ -134,9 +142,12 @@ namespace WindowsFormsApp1
             // richTextBox1
             // 
             this.richTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.richTextBox1.Location = new System.Drawing.Point(78, 3);
+
+            this.richTextBox1.Location = new System.Drawing.Point(80, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(234, 79);
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(234, 77);
+
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
@@ -149,7 +160,9 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 5;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
+
             this.button1.Click += new System.EventHandler(this.button1_Click);
+
             // 
             // Form5
             // 
