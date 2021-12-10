@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        public static string SetValueForText1 = "";
+        public static int User_ID = -1;
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace WindowsFormsApp1
                     if (name_box.Text != "")
                     {
                         //set el id el gded
-                        SetValueForText1 = "1";
+                        User_ID = 1;
                         Form frm = new Form2();
                         this.Hide();
                         frm.ShowDialog();
