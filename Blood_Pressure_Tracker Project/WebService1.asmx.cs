@@ -128,6 +128,7 @@ namespace Blood_Pressure_Tracker_Project
                 correct = false;
             else
                 correct = true;
+
             DataReader.Close();
             conn.Close();
 

@@ -34,14 +34,12 @@ namespace WindowsFormsApp1
             if (textBox1.Text != "" && textBox2.Text != "")
             {
                 // bashof el user name dah mawgod w dah el password bta3u wlaa laa , aw bakhod data wana at3aml
-                bool isPresent = false;
+                
                 bool passMatch = false;
-                if (sc.checkUsernameAvailability(textBox1.Text))
-                    isPresent = true;
                 if (sc.checkPassword(textBox1.Text, textBox2.Text))
                     passMatch = true;
 
-                if (isPresent && passMatch)
+                if (passMatch)
                 {
                     
                     Form1.User_ID = sc.getID(textBox1.Text);

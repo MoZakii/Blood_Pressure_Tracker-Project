@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
                 {
                     // el esm uniqe
                     bool isUnique = true;
-                    if (sc.checkUsernameAvailability(name_box.Text))
+                    if (!sc.checkUsernameAvailability(name_box.Text))
                         isUnique = false;
 
                     if (isUnique)
