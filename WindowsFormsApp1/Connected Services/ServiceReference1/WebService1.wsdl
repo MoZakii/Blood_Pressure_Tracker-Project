@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="insertData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="weight" type="s:float" />
+            <s:element minOccurs="1" maxOccurs="1" name="gender" type="s1:char" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertDataResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ViewUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ViewUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ViewUserInfoResult" type="tns:UserInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UserInfo" />
+      <s:element name="UpdateUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="weight" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateUserInfoResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="getID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getIDResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkUsernameAvailability">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkUsernameAvailabilityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkUsernameAvailabilityResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="checkPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkPasswordResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPressureReadings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserPressureReadingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserPressureReadingsResult" type="tns:ArrayOfPressureReading" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPressureReading">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PressureReading" nillable="true" type="tns:PressureReading" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PressureReading" />
+      <s:element name="insertPressureData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Order" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="High" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Low" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="insertPressureDataResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="char">
+        <s:restriction base="s:unsignedShort" />
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="insertDataSoapIn">
+    <wsdl:part name="parameters" element="tns:insertData" />
+  </wsdl:message>
+  <wsdl:message name="insertDataSoapOut">
+    <wsdl:part name="parameters" element="tns:insertDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ViewUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:ViewUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="ViewUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:ViewUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpdateUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="getIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getID" />
+  </wsdl:message>
+  <wsdl:message name="getIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkUsernameAvailabilitySoapIn">
+    <wsdl:part name="parameters" element="tns:checkUsernameAvailability" />
+  </wsdl:message>
+  <wsdl:message name="checkUsernameAvailabilitySoapOut">
+    <wsdl:part name="parameters" element="tns:checkUsernameAvailabilityResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:checkPassword" />
+  </wsdl:message>
+  <wsdl:message name="checkPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:checkPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPressureReadingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserPressureReadings" />
+  </wsdl:message>
+  <wsdl:message name="GetUserPressureReadingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserPressureReadingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="insertPressureDataSoapIn">
+    <wsdl:part name="parameters" element="tns:insertPressureData" />
+  </wsdl:message>
+  <wsdl:message name="insertPressureDataSoapOut">
+    <wsdl:part name="parameters" element="tns:insertPressureDataResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebService1Soap">
+    <wsdl:operation name="insertData">
+      <wsdl:input message="tns:insertDataSoapIn" />
+      <wsdl:output message="tns:insertDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ViewUserInfo">
+      <wsdl:input message="tns:ViewUserInfoSoapIn" />
+      <wsdl:output message="tns:ViewUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <wsdl:input message="tns:UpdateUserInfoSoapIn" />
+      <wsdl:output message="tns:UpdateUserInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getID">
+      <wsdl:input message="tns:getIDSoapIn" />
+      <wsdl:output message="tns:getIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkUsernameAvailability">
+      <wsdl:input message="tns:checkUsernameAvailabilitySoapIn" />
+      <wsdl:output message="tns:checkUsernameAvailabilitySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="checkPassword">
+      <wsdl:input message="tns:checkPasswordSoapIn" />
+      <wsdl:output message="tns:checkPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPressureReadings">
+      <wsdl:input message="tns:GetUserPressureReadingsSoapIn" />
+      <wsdl:output message="tns:GetUserPressureReadingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="insertPressureData">
+      <wsdl:input message="tns:insertPressureDataSoapIn" />
+      <wsdl:output message="tns:insertPressureDataSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebService1Soap" type="tns:WebService1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertData">
+      <soap:operation soapAction="http://tempuri.org/insertData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewUserInfo">
+      <soap:operation soapAction="http://tempuri.org/ViewUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap:operation soapAction="http://tempuri.org/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getID">
+      <soap:operation soapAction="http://tempuri.org/getID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUsernameAvailability">
+      <soap:operation soapAction="http://tempuri.org/checkUsernameAvailability" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPassword">
+      <soap:operation soapAction="http://tempuri.org/checkPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPressureReadings">
+      <soap:operation soapAction="http://tempuri.org/GetUserPressureReadings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPressureData">
+      <soap:operation soapAction="http://tempuri.org/insertPressureData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService1Soap12" type="tns:WebService1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="insertData">
+      <soap12:operation soapAction="http://tempuri.org/insertData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ViewUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/ViewUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpdateUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getID">
+      <soap12:operation soapAction="http://tempuri.org/getID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkUsernameAvailability">
+      <soap12:operation soapAction="http://tempuri.org/checkUsernameAvailability" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPassword">
+      <soap12:operation soapAction="http://tempuri.org/checkPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPressureReadings">
+      <soap12:operation soapAction="http://tempuri.org/GetUserPressureReadings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="insertPressureData">
+      <soap12:operation soapAction="http://tempuri.org/insertPressureData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebService1">
+    <wsdl:port name="WebService1Soap" binding="tns:WebService1Soap">
+      <soap:address location="https://localhost:44339/WebService1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebService1Soap12" binding="tns:WebService1Soap12">
+      <soap12:address location="https://localhost:44339/WebService1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
