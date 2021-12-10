@@ -187,5 +187,11 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blood_Pressure_Tracker Project\Blood_Pressure_Tracker Project.csproj">
+      <Project>{d7aec654-3a4d-4c81-8f8f-7d55d8aba1d0}</Project>
+      <Name>Blood_Pressure_Tracker Project</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

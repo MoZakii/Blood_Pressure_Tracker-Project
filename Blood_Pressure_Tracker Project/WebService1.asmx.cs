@@ -50,8 +50,8 @@ namespace Blood_Pressure_Tracker_Project
             }
             Data.Read();
 
-            UserInfo usrData = new UserInfo(int.Parse(Data[0].ToString()), Data[1].ToString(), int.Parse(Data[2].ToString())
-                , float.Parse(Data[3].ToString()), Data[4].ToString()[0]);
+            UserInfo usrData = new UserInfo(int.Parse(Data[0].ToString()), Data[1].ToString(), int.Parse(Data[3].ToString())
+                , float.Parse(Data[4].ToString()), Data[5].ToString()[0]);
 
             Data.Close();
             conn.Close();
@@ -176,10 +176,11 @@ namespace Blood_Pressure_Tracker_Project
     }
     public class PressureReading
     {
-        int ReadingOrder { get; }
-        int High { get; }
-        int Low { get; }
-        string Date { get; }
+        public int ReadingOrder;
+        public int High;
+        public int Low;
+        public string Date;
+
 
         public PressureReading(int readingOrder, int high, int low, string date)
         {
@@ -199,11 +200,11 @@ namespace Blood_Pressure_Tracker_Project
     }
     public class UserInfo
     {
-        int ID;
-        string UserName;
-        int Age;
-        float Weight;
-        char Gender;
+        public int ID;
+        public string UserName;
+        public int Age;
+        public float Weight;
+        public char Gender;
 
         public UserInfo(int iD, string userName, int age, float weight, char gender)
         {
@@ -215,7 +216,7 @@ namespace Blood_Pressure_Tracker_Project
         }
 
         public UserInfo()
-        {
+        { 
             ID = 0;
             UserName = "";
             Age = 0;
