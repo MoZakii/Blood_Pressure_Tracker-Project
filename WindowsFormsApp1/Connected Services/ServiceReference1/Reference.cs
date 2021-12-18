@@ -261,12 +261,11 @@ namespace WindowsFormsApp1.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetUserPressureReadings", ReplyAction="*")]
         System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference1.GetUserPressureReadingsResponse> GetUserPressureReadingsAsync(WindowsFormsApp1.ServiceReference1.GetUserPressureReadingsRequest request);
         
-        // CODEGEN: Generating message contract since element name Date from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/insertPressureData", ReplyAction="*")]
-        WindowsFormsApp1.ServiceReference1.insertPressureDataResponse insertPressureData(WindowsFormsApp1.ServiceReference1.insertPressureDataRequest request);
+        void insertPressureData(int Id, int Order, int High, int Low, System.DateTime Date);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/insertPressureData", ReplyAction="*")]
-        System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference1.insertPressureDataResponse> insertPressureDataAsync(WindowsFormsApp1.ServiceReference1.insertPressureDataRequest request);
+        System.Threading.Tasks.Task insertPressureDataAsync(int Id, int Order, int High, int Low, System.DateTime Date);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -763,83 +762,6 @@ namespace WindowsFormsApp1.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class insertPressureDataRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertPressureData", Namespace="http://tempuri.org/", Order=0)]
-        public WindowsFormsApp1.ServiceReference1.insertPressureDataRequestBody Body;
-        
-        public insertPressureDataRequest() {
-        }
-        
-        public insertPressureDataRequest(WindowsFormsApp1.ServiceReference1.insertPressureDataRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class insertPressureDataRequestBody {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
-        public int Id;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
-        public int Order;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
-        public int High;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
-        public int Low;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string Date;
-        
-        public insertPressureDataRequestBody() {
-        }
-        
-        public insertPressureDataRequestBody(int Id, int Order, int High, int Low, string Date) {
-            this.Id = Id;
-            this.Order = Order;
-            this.High = High;
-            this.Low = Low;
-            this.Date = Date;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class insertPressureDataResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="insertPressureDataResponse", Namespace="http://tempuri.org/", Order=0)]
-        public WindowsFormsApp1.ServiceReference1.insertPressureDataResponseBody Body;
-        
-        public insertPressureDataResponse() {
-        }
-        
-        public insertPressureDataResponse(WindowsFormsApp1.ServiceReference1.insertPressureDataResponseBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class insertPressureDataResponseBody {
-        
-        public insertPressureDataResponseBody() {
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface WebService1SoapChannel : WindowsFormsApp1.ServiceReference1.WebService1Soap, System.ServiceModel.IClientChannel {
     }
@@ -1056,36 +978,12 @@ namespace WindowsFormsApp1.ServiceReference1 {
             return ((WindowsFormsApp1.ServiceReference1.WebService1Soap)(this)).GetUserPressureReadingsAsync(inValue);
         }
         
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        WindowsFormsApp1.ServiceReference1.insertPressureDataResponse WindowsFormsApp1.ServiceReference1.WebService1Soap.insertPressureData(WindowsFormsApp1.ServiceReference1.insertPressureDataRequest request) {
-            return base.Channel.insertPressureData(request);
+        public void insertPressureData(int Id, int Order, int High, int Low, System.DateTime Date) {
+            base.Channel.insertPressureData(Id, Order, High, Low, Date);
         }
         
-        public void insertPressureData(int Id, int Order, int High, int Low, string Date) {
-            WindowsFormsApp1.ServiceReference1.insertPressureDataRequest inValue = new WindowsFormsApp1.ServiceReference1.insertPressureDataRequest();
-            inValue.Body = new WindowsFormsApp1.ServiceReference1.insertPressureDataRequestBody();
-            inValue.Body.Id = Id;
-            inValue.Body.Order = Order;
-            inValue.Body.High = High;
-            inValue.Body.Low = Low;
-            inValue.Body.Date = Date;
-            WindowsFormsApp1.ServiceReference1.insertPressureDataResponse retVal = ((WindowsFormsApp1.ServiceReference1.WebService1Soap)(this)).insertPressureData(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference1.insertPressureDataResponse> WindowsFormsApp1.ServiceReference1.WebService1Soap.insertPressureDataAsync(WindowsFormsApp1.ServiceReference1.insertPressureDataRequest request) {
-            return base.Channel.insertPressureDataAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<WindowsFormsApp1.ServiceReference1.insertPressureDataResponse> insertPressureDataAsync(int Id, int Order, int High, int Low, string Date) {
-            WindowsFormsApp1.ServiceReference1.insertPressureDataRequest inValue = new WindowsFormsApp1.ServiceReference1.insertPressureDataRequest();
-            inValue.Body = new WindowsFormsApp1.ServiceReference1.insertPressureDataRequestBody();
-            inValue.Body.Id = Id;
-            inValue.Body.Order = Order;
-            inValue.Body.High = High;
-            inValue.Body.Low = Low;
-            inValue.Body.Date = Date;
-            return ((WindowsFormsApp1.ServiceReference1.WebService1Soap)(this)).insertPressureDataAsync(inValue);
+        public System.Threading.Tasks.Task insertPressureDataAsync(int Id, int Order, int High, int Low, System.DateTime Date) {
+            return base.Channel.insertPressureDataAsync(Id, Order, High, Low, Date);
         }
     }
 }

@@ -25,14 +25,7 @@ namespace WindowsFormsApp1
         //use the the list GETTER to copy one list into another
         //pressure_reading = ServiceReference1.PressureReading.getList();
 
-        //These are just testcases
-        pressure_reading.Add(new ServiceReference1.PressureReading { ReadingOrder = 1, High = 100, Low = 50, Date = "10/12/2021" });
-            pressure_reading.Add(new ServiceReference1.PressureReading { ReadingOrder = 2, High = 150, Low = 100, Date = "11/12/2021" });
-            pressure_reading.Add(new ServiceReference1.PressureReading { ReadingOrder = 3, High = 130, Low = 70, Date = "12/12/2021" });
-            pressure_reading.Add(new ServiceReference1.PressureReading { ReadingOrder = 4, High = 200, Low = 90, Date = "13/12/2021" });
-            pressure_reading.Add(new ServiceReference1.PressureReading { ReadingOrder = 5, High = 100, Low = 80, Date = "14/12/2021" });
-
-            //Chart SHIT that binds the LIST to the CHART
+            //Chart Stuff that binds the LIST to the CHART
             chart1.DataSource = pressure_reading;
             Series series1 = new Series();
             chart1.Series.Add("High");
@@ -72,5 +65,9 @@ namespace WindowsFormsApp1
             this.Close();
         }
 
+        private void Form9_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

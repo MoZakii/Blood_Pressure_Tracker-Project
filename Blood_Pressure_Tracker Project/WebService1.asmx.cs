@@ -152,7 +152,7 @@ namespace Blood_Pressure_Tracker_Project
             {
                 // 0 id    1 order  2 high  3 low   4 date
                 UserReadingPressures.Add(new PressureReading(int.Parse(Data[1].ToString()), int.Parse(Data[2].ToString())
-                    , int.Parse(Data[3].ToString()), Data[4].ToString()));
+                    , int.Parse(Data[3].ToString()), (Data[4]).ToString() ));
             }
 
             Data.Close();
@@ -160,7 +160,7 @@ namespace Blood_Pressure_Tracker_Project
             return UserReadingPressures;
         }
         [WebMethod]
-        public void insertPressureData(int Id, int Order, int High, int Low, string Date)
+        public void insertPressureData(int Id, int Order, int High, int Low, DateTime Date)
         {
             SqlConnection conn = new SqlConnection(connectionString);
             conn.Open();
@@ -187,7 +187,7 @@ namespace Blood_Pressure_Tracker_Project
             ReadingOrder = readingOrder;
             High = high;
             Low = low;
-            Date = date;
+            Date = date.Substring(0, 10);
         }
         public PressureReading()
         {

@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             }
             else 
             {
-                sc.insertPressureData(Form1.User_ID, readings.Count+1,int.Parse(textBox1.Text),int.Parse(textBox2.Text),dt.ToString("dd/MM/yyyy"));
+                sc.insertPressureData(Form1.User_ID, readings.Count+1,int.Parse(textBox1.Text),int.Parse(textBox2.Text),dt);
                 textBox1.Text = String.Empty;
                 textBox2.Text = String.Empty;
             }

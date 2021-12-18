@@ -154,9 +154,6 @@
     <None Include="Connected Services\ServiceReference1\WindowsFormsApp1.ServiceReference1.insertDataResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference1\WindowsFormsApp1.ServiceReference1.insertPressureDataResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Connected Services\ServiceReference1\WindowsFormsApp1.ServiceReference1.PressureReading.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
