@@ -37,8 +37,13 @@ namespace WindowsFormsApp1
 
 
             List<ServiceReference1.PressureReading> readings = new List<ServiceReference1.PressureReading>();
-            int low = readings[readings.Count-1].Low, high = readings[readings.Count-1].High;
-            
+            int low = 0, high = 0;
+            if (readings.Count != 0)
+            {
+                low = readings[readings.Count - 1].Low;
+                high = readings[readings.Count - 1].High;
+            }
+
             if (low < 60 || high < 90)
             {
                 richTextBox1.Text = low_diet[0];
