@@ -50,9 +50,9 @@
             this.richTextBox1.Enabled = false;
             this.richTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.richTextBox1.Location = new System.Drawing.Point(127, 188);
+            this.richTextBox1.Location = new System.Drawing.Point(127, 139);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(225, 49);
+            this.richTextBox1.Size = new System.Drawing.Size(225, 98);
             this.richTextBox1.TabIndex = 9;
             this.richTextBox1.Text = "";
             // 

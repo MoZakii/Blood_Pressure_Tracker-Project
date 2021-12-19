@@ -35,8 +35,9 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
 
-
+            ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
             List<ServiceReference1.PressureReading> readings = new List<ServiceReference1.PressureReading>();
+            readings = obj.GetUserPressureReadings(Form1.User_ID).ToList();
             int low = 0, high = 0;
             if (readings.Count != 0)
             {
